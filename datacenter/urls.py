@@ -18,6 +18,8 @@ from django.urls import path
 from mysite import views  #從mysite的資料夾匯入views.py的程式
 
 urlpatterns = [
+    path('list/<int:id>/', views.showlist), #列出指定清單的所有影片
+    path('playlist/',views.playlist),   #列出所有影片的名稱
     path('admin/', admin.site.urls),
     path('', views.index),  #首頁處理程序
 ]
